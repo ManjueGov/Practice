@@ -1,9 +1,3 @@
 Feature:
 
   Scenario: practice
-
-
-
-
-
-
