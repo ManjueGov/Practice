@@ -6,5 +6,6 @@ package steps;
 public class BaseSteps {
 
     public static PageStore pageStore;
+    protected String excelSheetFileName = "excelSheet";
 
 }

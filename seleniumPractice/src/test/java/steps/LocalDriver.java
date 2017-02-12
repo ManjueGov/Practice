@@ -4,6 +4,7 @@ import org.apache.commons.lang.SystemUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 /**
@@ -17,6 +18,12 @@ public class LocalDriver {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
+        if (browser.equals("firefox"))
+        {
+            setFirefoxDriverBasedOnOS();
+            return new FirefoxDriver();
+        }
+
         if (browser.equals("chrome")) {
             setChromeDriverBasedOnOperatingSystem();
             ChromeOptions options = new ChromeOptions();
@@ -28,6 +35,15 @@ public class LocalDriver {
         }
 
         throw new RuntimeException("Not a supported driver");
+    }
+
+    private void setFirefoxDriverBasedOnOS()
+    {
+        if (isWindows())
+        {
+            System.setProperty("webdriver.gecko.driver", "src/test/java/drivers/geckodriver.exe");
+            return;
+        }
     }
 
 
