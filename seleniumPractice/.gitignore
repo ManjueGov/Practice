@@ -6,3 +6,4 @@ gradle
 .xlsx#
 .exe
 .~lock*
+.idea/

@@ -38,7 +38,7 @@ public class LoginDetailPage {
         password.sendKeys(loginDetails.getPassword());
         wait.until(ExpectedConditions.elementToBeClickable(signInButton));
         signInButton.click();
-        wait.until(ExpectedConditions.elementToBeClickable(logOutButton));
-        logOutButton.click();
+//        wait.until(ExpectedConditions.elementToBeClickable(logOutButton));
+//        logOutButton.click();
     }
 }

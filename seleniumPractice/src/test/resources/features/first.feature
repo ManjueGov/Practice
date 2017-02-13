@@ -14,9 +14,10 @@ Feature: Accounts Demo
   @Demo @Sanity
   Scenario Outline: Account Login
     When he chooses to login as <loginDetails>
+    And he choose to create an event as <calendarEvents>
 
     Examples:
       | loginDetails |
       |user1         |
-      |user2         |
-      |user3         |
+#      |user2         |
+#      |user3         |
