@@ -1,5 +1,6 @@
 Feature: Accounts Demo
 
+  @Demo @Sanity
   Scenario Outline: Account Sign up using excel sheet
     When user choose to start signup an account
     And he enters the details as <signUpDetails>
@@ -10,6 +11,7 @@ Feature: Accounts Demo
       |user2           |
       |user3           |
 
+  @Demo @Sanity
   Scenario Outline: Account Login
     When he chooses to login as <loginDetails>
 
