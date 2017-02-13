@@ -16,3 +16,5 @@ Feature: Accounts Demo
     Examples:
       | loginDetails |
       |user1         |
+      |user2         |
+      |user3         |
